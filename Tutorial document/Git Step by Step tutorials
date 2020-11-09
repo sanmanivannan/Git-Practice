@@ -52,10 +52,91 @@ ssh-keygen
 
 .gitignore
 ==========
-
 .gitignore is the the hidden file within the GIT repository(which we need to manually create)
 Is use to have the librarys, dependencies and other unwanted file which doesnt need need to be git commited
 All the files inside the .gitignore file would be omited/ignored while the commits are done
+
+git reset
+===========
+git reset is used to remove the files from the staging already
+
+
+git reset <filename>
+
+when only "git reset" command is provided everything on the staging will be removed
+
+
+git log
+=========
+git-diff - Show changes between commits, commit and working tree, etc
+
+Basically, it would display the differences of changes on the staging area and the .git directory/repository
+
+
+git remote
+===========
+git remote command is used to add/link the git remote repository to the locak repository
+eg:
+git remote add origin <GIT HUB URL>
+
+you can also add multiple remote origins, like
+git remote add origin1 <git hib url>
+
+Once the git remote is linked, next is the PULL and PUSH data from/to the remote repository
+
+GIT PULL (fetch + merge)
+============
+git pull origin <master/branch name>
+
+Note: THis will work only after adding the the remote repo to our local, as mentioned on the above"git remote" section
+
+
+GIT PUSH
+==========
+git push origin <master/ branchname>
+
+
+GIT MERGE (HEAD/local repo/commitstage to workingspace)
+========================================================
+This command is used to merge the brances to each other, for example if you could like to merge a branch to the master branch
+First, go the master branch by using the command - git checkout master
+After which, git merge <branchname> master (this command will merge <branchname> to the master branch)
+
+Similarly, if you like tto merge branch 2 to branch 1. Go to branch 1 by using the checkout command
+and then use $git merge branch2(source) branch1(destination)
+
+
+GIT fetch(fetching the data from remote repo to the localcommitstate/local repo)
+==========
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
