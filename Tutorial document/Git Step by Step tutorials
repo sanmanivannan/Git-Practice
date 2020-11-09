@@ -56,11 +56,18 @@ ssh-keygen
 Is use to have the librarys, dependencies and other unwanted file which doesnt need need to be git commited
 All the files inside the .gitignore file would be omited/ignored while the commits are done
 
-git reset
+git revert
 ===========
+revert is safer than reset, as revert can go back to any stage.
+git log
+git revert <change#>
+
+
+git reset (is very dangerous command, it will reset to any previous stage. all the new changes will be deleted)
+==================================================================================================================
 git reset is used to remove the files from the staging already
 
-
+git log
 git reset <filename>
 
 when only "git reset" command is provided everything on the staging will be removed
@@ -108,6 +115,89 @@ and then use $git merge branch2(source) branch1(destination)
 
 GIT fetch(fetching the data from remote repo to the localcommitstate/local repo)
 ==========
+
+
+git squash
+==============
+While merging the branhces and if we dont want to see any commits on the merged branch we can use squash option
+
+for example, when we want to merge <branch1> to master and dont want to see the commits commied on the <branch1>, use squash command
+
+git checkout master
+git merge <branch1> --squash
+git commit -m "branch1 merged with master>
+
+
+git rebase (inverse of merge)
+============
+instead of mergeing the <branch1> to  master branch, using the rebase
+
+git checkout <branch1>
+git rebase master
+
+NOTE: please use rebase only on the localrepo, SHOULDNT be uase on the public repos.
+
+
+git stash
+==============
+when we want to switch from 1 branch to another branch, whil we are middle of something on the previouls and wanted to safely save the changes, we use stash command
+git add .
+git stash(this will safely save the changes in the staging area, eventhough we havent commited it)
+
+git checkout master (complete all work on the master branch)
+
+Then checkout to the <feature1> branch and comtinue the work which was left previously
+git checkout <feature1>
+git stash apply
+and not resume your work where ever you have left :-)
+
+Resolving the merge conflicts:
+======================================
+1. Conflicts occurs when 2 or more persons make changes on a file
+2. Assume that your co-worked made some changes on a file and pushed the code to the remote repo(github-origin master)
+3. And on local repo you are making some chamnges on the same file and commiting the changes
+4. before pushing the code to the remote repo, its always a good suggestion to fectch the code from remote and compare it with the local changes
+
+git fetch origin master (which bascically brings the code from origin master to the local HEAD)
+
+git status
+(whcih will output saying that, "your branch and the 'origin master' changes have diverged and have 1 /2 difference commits")
+Once discussing with the co-worker and the conflicts have been solved
+git merge origin master
+git status
+
+
+git cherrypicking
+====================
+
+
+git amend
+===============
+
+
+
+git flow
+=============
+
+git flow init
+
+git flow feature start feature-1
+
+git flow feature finish feature-1
+
+git flow feature publich feature-1
+
+
+master
+Develop
+feature
+hotfix
+Release
+
+
+
+
+
 
 
 
