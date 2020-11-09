@@ -1,0 +1,62 @@
+git init
+=========
+1. git init command is used when a project is started freshly and wanted to be created in the git project
+ NOTE: If any project is Cloned or Downloaded from the GITHUB/GITLAB, then the "git init" command may not be used as its already initialized
+
+2. when "git init: command is executed initially during a normal project turning to the git project; a hidded file called .git file is created and placed on the git file
+
+what is inside the .git file and why its important:
+-----------------------------------------------------
+The . git folder contains all the information that is necessary for your project in version control and all the information about commits, remote repository address, etc. 
+All of them are present in this folder. It also contains a log that stores your commit history so that you can roll back to history.
+
+git config
+===========
+this is used to configure the user who is using the git on that PC who is going to work on the git projects
+
+git config --global user.name "username"
+git config --global user.email "useremail"
+
+
+git Clone
+===========
+
+git clone <HTTPS/SSH>
+
+git add
+=========
+
+
+
+git commit
+============
+
+
+git status
+===========
+
+
+git login
+===========
+
+
+git and github SSH connection setup
+====================================
+git(local) and the github(remote repo) should always be connected to the seemless connectivity to make the transaction between those 2
+For which we need to setup the SSH connectivity between those 2, else eveytime when we try to push/pull data between those 2, we should provide the username and password
+Just to avoid those manual process, we need to setup the SSH  connectivity 
+NOTE: Do only the SSH setup in your PC or Trusted systems(DONT setup on the PUBLIC PCs)
+
+ssh-keygen
+
+
+.gitignore
+==========
+
+.gitignore is the the hidden file within the GIT repository(which we need to manually create)
+Is use to have the librarys, dependencies and other unwanted file which doesnt need need to be git commited
+All the files inside the .gitignore file would be omited/ignored while the commits are done
+
+
+
+
