@@ -167,12 +167,28 @@ git merge origin master
 git status
 
 
-git cherrypicking
+git cherry-pick
 ====================
+cherry-pick is picking a specific COMMIT from a person or machine. And adding a commit in our master or branch which we are working
+
+Assuming that we gave added <user2> repo as one of our remote apart from ours(which is generally "origin")
+$git remote
+origin 
+user2
+
+$git fetch user2
+$git log user2/master(any branchname)
+
+$git cherry-pick <sha-1 of user2 repo>
+which will, cherry-pick only that <sha-1> commit of <user2> and merge that as our lastest commit(basicially, used to pick any hotfixes in the project)
 
 
 git amend
 ===============
+Amend is used to amend something without making any commits, just by using the last commit made
+git status
+git add <file1> <file2>
+git commit --no-edit
 
 
 
